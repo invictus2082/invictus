@@ -1,7 +1,7 @@
 Invictus Core 
 =====================================
 
-https://ivccoin.com
+http://ivccoin.com
 
 What is Invictus?
 ----------------
@@ -13,7 +13,7 @@ out collectively by the network. Invictus Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Invictus Core software, see https://invictus.com
+the Invictus Core software, see http://ivccoin.com
 
 License
 -------
