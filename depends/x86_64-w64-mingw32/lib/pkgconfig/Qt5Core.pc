@@ -1,0 +1,15 @@
+prefix=/home/test/inv/depends/x86_64-w64-mingw32
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/native/bin
+qt_config=minimal-config small-config medium-config large-config full-config accessibility static qpa reduce_relocations getaddrinfo jpeg png no-gif no-freetype no-harfbuzz zlib openssl-linked concurrent release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.2.1
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lole32 -luuid -lws2_32 -ladvapi32 -lshell32 -luser32 -lkernel32   
+Cflags: -I${includedir}/QtCore -I${includedir}
+

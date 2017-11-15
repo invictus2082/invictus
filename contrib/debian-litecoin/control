@@ -1,0 +1,88 @@
+Source: invictus
+Section: utils
+Priority: optional
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Uploaders: Micah Anderson <micah@debian.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libboost-system-dev (>> 1.35) | libboost-system1.35-dev,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libminiupnpc8-dev | libminiupnpc-dev (>> 1.6),
+ libboost-filesystem-dev (>> 1.35) | libboost-filesystem1.35-dev,
+ libboost-program-options-dev (>> 1.35) | libboost-program-options1.35-dev,
+ libboost-thread-dev (>> 1.35) | libboost-thread1.35-dev,
+ libboost-test-dev (>> 1.35) | libboost-test1.35-dev,
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.invictus.org/
+Vcs-Git: git://github.com/invictus/invictus.git
+Vcs-Browser: https://github.com/invictus/invictus
+
+Package: invictusd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Invictus is a peer-to-peer Internet currency that enables instant,
+ near-zero cost payments to anyone in the world. Invictus is an open 
+ source, global payment network that is fully decentralized without 
+ any central authorities. Mathematics secures the network and empowers
+ individuals to control their own finances. Invictus features faster 
+ transaction confirmation times and improved storage efficiency than 
+ the leading math-based currency. With substantial industry support, 
+ trade volume and liquidity, Invictus is a proven medium of commerce 
+ complementary to Bitcoin.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 5+ GB of space, slowly growing.
+ .
+ This package provides the daemon, invictusd, and the CLI tool
+ invictus-cli to interact with the daemon.
+
+Package: invictus-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Invictus is a peer-to-peer Internet currency that enables instant,
+ near-zero cost payments to anyone in the world. Invictus is an open 
+ source, global payment network that is fully decentralized without 
+ any central authorities. Mathematics secures the network and empowers
+ individuals to control their own finances. Invictus features faster 
+ transaction confirmation times and improved storage efficiency than 
+ the leading math-based currency. With substantial industry support, 
+ trade volume and liquidity, Invictus is a proven medium of commerce 
+ complementary to Bitcoin.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 5+ GB of space, slowly growing.
+ .
+ This package provides Invictus-Qt, a GUI for Invictus based on Qt.
+
+Package: invictus-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Invictus is a peer-to-peer Internet currency that enables instant,
+ near-zero cost payments to anyone in the world. Invictus is an open 
+ source, global payment network that is fully decentralized without 
+ any central authorities. Mathematics secures the network and empowers
+ individuals to control their own finances. Invictus features faster 
+ transaction confirmation times and improved storage efficiency than 
+ the leading math-based currency. With substantial industry support, 
+ trade volume and liquidity, Invictus is a proven medium of commerce 
+ complementary to Bitcoin.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 5+ GB of space, slowly growing.
+ .
+ This package provides invictus-tx, a command-line transaction creation
+ tool which can be used without a invictus daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
